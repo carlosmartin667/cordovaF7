@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap: content:">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="theme-color" content="#2196f3">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
+  <title>Arquitectura</title>
+
+  <link rel="stylesheet" href="framework7/css/framework7.bundle.min.css">
+  <link rel="stylesheet" href="css/icons.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+
+<body>
+  <div id="app">
+    <!-- Status bar overlay for fullscreen mode-->
+    <div class="statusbar"></div>
+    <!-- Left panel with reveal effect when hidden -->
+    <div class="panel panel-left panel-reveal">
+      <div class="view view-left">
+        <div class="page">
+          <div class="navbar">
+            <div class="navbar-inner sliding">
+              <div class="title">Temas De Evaluacion</div>
+            </div>
+          </div>
+          <div class="page-content">
+            <div class="block-title">Seleccione Tema Principal: </div>
+            <div class="list links-list">
+              <ul>
+                <li><a href="/HISTORIA/">HISTORIA DE LA ARQUITECTURA</a></li>
+                <li><a href="/ORDENADOR/">ARQUITECTURA DEL ORDENADOR</a></li>
+              </ul>
+            </div>
+            <div class="block-title">Menu de los Temas</div>
+            <div class="list links-list">
+              <ul>
+                <li>
+                  <a href="/pcHistoria/" data-view=".view-main" class="panel-close">la Historia de la Pc</a>
+                </li>
+                <li>
+                  <a href="/procesadorMicro/" data-view=".view-main" class="panel-close">los Micro procesador</a>
+                </li>
+                <li>
+                  <a href="/sMemoria/" data-view=".view-main" class="panel-close">circuito de Memoria</a>
+                </li>
+                <li>
+                  <a href="/vonneumann/" data-view=".view-main" class="panel-close">von neumann</a>
+                </li>
+                <li>
+                  <a href="/bus/" data-view=".view-main" class="panel-close">Bus</a>
+                </li>
+                <li>
+                  <a href="/ram/" data-view=".view-main" class="panel-close">ram</a>
+                </li>
+                <li>
+                  <a href="/rom/" data-view=".view-main" class="panel-close">rom</a>
+                </li>
+                <li>
+                  <a href="/otrosComponentes/" data-view=".view-main" class="panel-close">mas Componentes de la PC</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Right panel with cover effect -->
+    <div class="panel panel-right panel-cover theme-dark">
+      <div class="view">
+        <div class="page">
+          <div class="navbar">
+            <div class="navbar-inner">
+              <div class="title">Menu dos</div>
+            </div>
+          </div>
+          <div class="page-content">
+            <div class="block">parte secuandaria de la unidad</div>
+            <div class="block">generaciones de pc</div>
+            <li>
+              <a href="/generacion1/" data-view=".view-main" class="panel-close">generacion 1</a>
+            </li>
+            <li>
+              <a href="/generacion2/" data-view=".view-main" class="panel-close">generacion 2</a>
+            </li>
+            <li>
+              <a href="/generacion3/" data-view=".view-main" class="panel-close">generacion 3</a>
+            </li>
+            <li>
+              <a href="/generacion4/" data-view=".view-main" class="panel-close">generacion 4</a>
+            </li>
+            <li>
+              <a href="/generacion5/" data-view=".view-main" class="panel-close">generacion 5</a>
+            </li>
+            <div class="block">mas Partes de la pc</div>
+            <li>
+              <a href="/discoDuro/" data-view=".view-main" class="panel-close">disco duro</a>
+            </li>
+            <li>
+              <a href="/memoriaflash/" data-view=".view-main" class="panel-close">Memoria flash</a>
+            </li>
+            <li>
+              <a href="/perifericos/" data-view=".view-main" class="panel-close">Perifericos</a>
+            </li>
+            <li>
+              <a href="/procesador/" data-view=".view-main" class="panel-close">Procesador</a>
+            </li>
+            <li>
+              <a href="/tarjetaGrafica/" data-view=".view-main" class="panel-close">Tarjeta grafica</a>
+            </li>
+            <li>
+              <a href="/tarjetaSonido/" data-view=".view-main" class="panel-close">Tarjeta sonido</a>
+            </li>
+            <div class="block">documentales </div>
+            <li>
+              <a href="/videos/" data-view=".view-main" class="panel-close">Viedos</a>
+            </li>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Your main view, should have "view-main" class -->
+    <div class="view view-main safe-areas">
+      <!-- Page, data-name contains page name which can be used in callbacks -->
+      <div class="page" data-name="home">
+        <!-- Top Navbar -->
+        <div class="navbar">
+          <div class="navbar-inner">
+            <div class="left">
+              <a href="#" class="link icon-only panel-open" data-panel="left">
+                <i class="icon f7-icons ios-only">menu</i>
+                <i class="icon material-icons md-only">menu</i>
+              </a>
+            </div>
+            <div class="title sliding">Arquitectura</div>
+            <div class="right">
+              <a href="#" class="link icon-only panel-open" data-panel="right">
+                <i class="icon f7-icons ios-only">menu</i>
+                <i class="icon material-icons md-only">menu</i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Toolbar-->
+        <div class="toolbar toolbar-bottom">
+          <div class="toolbar-inner">
+            <a link="carlosmartinmoscosocornejo@gmail.com" class="link">Carlos Cornejo</a>
+
+          </div>
+        </div>
+        <!-- Scrollable page content-->
+        <div class="page-content">
+          <div class="block block-strong">
+            <p>La arquitectura de computadoras es el diseño conceptual y la estructura operacional fundamental de un
+              sistema de computadoras.1​Es decir, es un modelo y una descripción funcional de los requerimientos y las
+              implementaciones de diseño para varias partes de una computadora, con especial interés en la forma en que
+              la unidad central de proceso (CPU) trabaja internamente y accede a las direcciones de memoria.</p>
+
+            <p> También la arquitectura del computador está basado en tres grandes principios que se aplican a todo
+              dispositivo o componente del computador, estos tres principios son: velocidad, capacidad y tipo de
+              conexión.</p>
+
+            <p>También suele definirse como la forma de interconectar componentes de hardware, para crear computadoras
+              según los requerimientos de funcionalidad, rendimiento y costo.</p>
+
+            <p> La computadora recibe y envía la información a través de los periféricos, por medio de los canales. La
+              CPU
+              es la encargada de procesar la información que le llega a la computadora. El intercambio de información se
+              tiene que hacer con los periféricos y la CPU. Puede considerarse que todas aquellas unidades de un
+              sistema, exceptuando la CPU, se denomina periférico</p>
+          </div>
+          <div class="block block-strong">
+            <h3>funcionamiento genral de la pc</h3>
+            <p> 1.click interaccion usuario</p>
+            <p> 2.recibe interacccion del cpu</p>
+            <p> 3.mediante el bus de coneccion setranfiere a la memoria</p>
+            <p>4.devolucion (fixba retto alimentacion) cpu memoria y memoria controlador de entrada salida.</p>
+            <p>a)cuando el controlador recibe la info se da la decodificacion de la info
+              una vez q se determina la direcccion de dicha informacion</p>
+            <p> b)se procede al registro de datos y de las condiciones de almacenamiento</p>
+            <p> c) luego del registro se procede a una consulta de control</p>
+            <p> d)una vez realisada la consulta de control se transmite la info al periferico</p>
+
+          </div>
+          <div class="block-title">TEMAS</div>
+          <div class="list">
+            <ul>
+
+              <li>
+                <a href="/bus/" class="item-content item-link">
+                  <div class="item-inner">
+                    <div class="item-title">BUS</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="/pcHistoria/" class="item-content item-link">
+                  <div class="item-inner">
+                    <div class="item-title">historia de la PC</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="/procesadorMicro/" class="item-content item-link">
+                  <div class="item-inner">
+                    <div class="item-title">Micro Procesador</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="/sMemoria/" class="item-content item-link">
+                  <div class="item-inner">
+                    <div class="item-title">circuito de Memoria</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="/vonneumann/" class="item-content item-link">
+                  <div class="item-inner">
+                    <div class="item-title">von neumann</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="/ram/" class="item-content item-link">
+                  <div class="item-inner">
+                    <div class="item-title">ram</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="/rom/" class="item-content item-link">
+                  <div class="item-inner">
+                    <div class="item-title">rom</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="/otrosComponentes/" class="item-content item-link">
+                  <div class="item-inner">
+                    <div class="item-title">mas componentes de la PC</div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Cordova -->
+  <!--
+  <script src="cordova.js"></script>
+  -->
+
+  <!-- Framework7 library -->
+  <script src="framework7/js/framework7.bundle.min.js"></script>
+
+  <!-- App routes -->
+  <script src="js/routes.js"></script>
+
+  <!-- Your custom app scripts -->
+  <script src="js/app.js"></script>
+</body>
+
+</html>
